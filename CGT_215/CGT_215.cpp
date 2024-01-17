@@ -6,6 +6,10 @@
 int main()
 {
     std::cout << "Hello World!\n";
+
+    std::cout << std::endl;
+
+    std::cout << "This is CGT 215!" << std::endl;
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
