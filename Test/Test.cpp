@@ -1,17 +1,11 @@
-// CGT_215.cpp : This file contains the 'main' function. Program execution begins and ends there.
+// Test.cpp : This file contains the 'main' function. Program execution begins and ends there.
 //
 
 #include <iostream>
 
-using namespace std;
-
 int main()
 {
-    cout << "Hello World!\n";
-
-    cout << endl;
-
-    cout << "This is CGT 215!" << endl;
+    std::cout << "Hello World!\n";
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
