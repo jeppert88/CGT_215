@@ -7,11 +7,28 @@ using namespace std;
 
 int main()
 {
-    cout << "Hello World!\n";
+    float A;
+    float B;
+    float x;
 
-    cout << endl;
+    cout << "For the equation Ax + B. " << endl;
 
-    cout << "This is CGT 215!" << endl;
+    cout << "Please enter a value for A: ";
+    cin >> A;
+
+    cout << "Please enter a value for B: ";
+    cin >> B;
+
+    cout << "A=" << A << endl;
+    cout << "B=" << B << endl;
+
+    cout << "Solving " << A << "x + " << B << "= 0 for x...";
+
+    B = -B;
+    x = B / A;
+    cout << "The answer is:" << endl;
+    cout << "x = " << x;
+
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
