@@ -13,12 +13,12 @@ void printMenu(int& choice) {
 }
 
 void getChoices(float& A, float& B) {
-	cout << "Please enter the first value: ";
+	cout << "Please enter the first value: "; // get user input into variable A and B
 	cin >> A;
 	cout << "Please enter the second value: ";
 	cin >> B;
 }
-void addition(float A, float B) {
+void addition(float A, float B) { // perform selected mathematical operator
 	cout << A << " + " << B << " = " << A + B;
 }
 void subtraction(float A, float B) {
@@ -38,7 +38,7 @@ int main() {
 	float B;
 	printMenu(choice);
 	getChoices(A, B);
-	if (choice == 1) {
+	if (choice == 1) { // depending on the user selection, print their results
 		addition(A, B);
 	}
 	if (choice == 2) {
