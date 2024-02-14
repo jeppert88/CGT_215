@@ -9,7 +9,7 @@ void printMenu() {
 	cout << "\t4. Exit" << endl;
 	cout << "Your Selection: ";
 }
-// test
+
 void factorial() {
 	int n;
 	int fact = 1;
