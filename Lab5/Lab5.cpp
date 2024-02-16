@@ -7,36 +7,44 @@
 
 using namespace std;
 
-char translate(string text, vector<char> code) {
+char translate_letter(char in, vector<char> code) {
+    if ((in >= 'A') && (in <= 'Z') ){
+        return code[in-'A'];
+    }
+    else if ((in >= 'a') && (in <= 'z')) {
+        int numToUpper = 'a'-'A';
+        int upper = in-numToUpper;
+        int codenum = code[upper-'A'];
+        return codenum+numToUpper;
+    }
+    else {
+       return in;
+    }
+}
 
-    for (int i = 0; i = text.size(); i++) {
-        if (text[i] >= 65 && text[i] <= 90) {
-            return code[text[i] - 65];
-            
-        }
-        else if (text[i] >= 97 && text[i] <= 122) {
-            text[i] = text[i] - 32;
-            code[i] = text[i] - 65;
-            return code[i] + 32;
-            
-        }
-        else {
-            return text[i];
-        }
+void  translate(string text, vector<char> code, vector<char>& output) {
+    for (int i = 0; i < text.size();  i++) {
+        output.push_back(translate_letter(text[i], code));
     }
 }
 
 int main()
 {
     vector<char> code({ 'V','F','X','B','L','I','T','Z','J','R','P','H','D','K','N','O','W','S','G','U','Y','Q','M','A','C','E' });
+    vector<char> output({});
 
     string text;
     cout << "Input text to cypher: ";
     getline(cin, text);
 
     cout << "Encoded Message: ";
-    cout << translate(text, code);
- 
+    translate(text, code, output);
+
+    for (int i = 0; i < output.size(); i++) {
+        cout << output[i];
+    }
+    cout << endl;
+   
 
 }
 
